@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class WeatherModel {
   String date;
@@ -22,7 +23,8 @@ class WeatherModel {
     var jsonData = mp['forecast']['forecastday'][0]['day'];
 
     return WeatherModel(
-      date: mp['location']['localtime'],
+      date: DateFormat().add_jm().format(
+        (DateTime.parse(mp['location']['localtime'])),),
       image: mp['current']['condition']['icon'],
       temp:  jsonData['avgtemp_c'],
       minTemp:jsonData['mintemp_c'],
@@ -30,13 +32,12 @@ class WeatherModel {
       weatherState: jsonData['condition']['text'],
     );
   }
-  @override
-  String toString()
-  {
-
-    return 'temp = $temp mintemp =$minTemp';
-
-  }
+  // @override
+  // String toString()
+  // {
+  //   return 'temp = $temp mintemp =$minTemp';
+  //
+  // }
 
 String getImage()
 {

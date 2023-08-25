@@ -29,12 +29,10 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  dio: ^4.0.6
-  shimmer: ^2.0.0
   flutter_bloc: ^8.1.1
   provider: ^6.0.5
-  bloc: ^8.1.0
   http: ^0.13.5
+  intl: ^0.18.1
   fluttertoast: ^8.1.2
   flutter:
     sdk: flutter
