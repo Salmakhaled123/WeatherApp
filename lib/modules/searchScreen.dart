@@ -41,7 +41,6 @@ class SearchScreen extends StatelessWidget {
                       .weatherData = model;
                   Provider.of<WeatherProvider>(context, listen: false)
                       .cityName = cityName;
-
                 },
                 keyboardType: TextInputType.text,
                 controller: searchController,
